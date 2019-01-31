@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>vue $set</title>
+<script src="https://static.runoob.com/assets/vue/1.0.11/vue.min.js"></script>
+</head>
+<body>
+<div class="app">
+    <div>
+        <p>watch方法使用</p>
+        <input v-model="data"/>
+    </div>
+</div>
+<!-- JavaScript 代码需要放在尾部（指定的HTML元素之后） -->
+<script>
+    var vm = new Vue({
+        el:".app",
+        data:{
+            data:"111",
+            obj:{
+                arr:[
+                    {value:''}
+                ],
+                data:""
+            },
+            num:""
+        },
+        watch:{
+            data(newValue,oldValue){
+                this.data.num = newValue+'2222111';
+                console.log(this.data.num)
+            }
+        }
+    })
+
+</script>
+</body>
+</html>
